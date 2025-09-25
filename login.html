@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Login</title></head>
+    <body>
+        <h1>Login</h1>
+        <input id="username" />
+        <input id="password" type="password" />
+        <button type="button" onclick="login()" >Login</button>
+        <p id="message">Waiting...</p>
+ 
+        <script>
+            function login(){
+                const u = document.getElementById('username').value;
+                const p = document.getElementById('password').value;
+ 
+                if( u === 'admin' && p === '1234' )
+                {
+                    document.getElementById('message').innerText = 'Login Successful';
+                }else{
+                    document.getElementById('message').innerText = 'Login Failed';
+                }
+            }
+        </script>
+    </body>
+</html>

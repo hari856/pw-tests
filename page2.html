@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Element Interaction</title>
+
+    <style>
+      .menu-item {
+        padding: 10px;
+        background: lightgray;
+        margin-bottom: 10px;
+      }
+      .tooltip {
+        display: none;
+      }
+      .menu-item:hover .tooltip {
+        display: inline;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Login Form</h1>
+    <input id="username" type="text" placeholder="Username" />
+    <input id="search" type="text" placeholder="Search..." />
+    <button>Submit</button>
+    <button role="button">Login</button>
+
+    <div class="menu-item">
+      Hover me
+      <span class="tooltip">Tooltip visible on hover</span>
+    </div>
+
+    <script>
+      document
+        .querySelector("button")
+        .addEventListener("click", () => alert("Submit clicked"));
+      document
+        .querySelector('[role="button"]')
+        .addEventListener("click", () => alert("Login clicked"));
+    </script>
+  </body>
+</html>

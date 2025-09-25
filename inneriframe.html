@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inner Frame</title>
+  </head>
+  <body>
+    <h2>Inside the iFrame</h2>
+    <button id="clickMe" onclick="showMessage()">Click Me</button>
+    <p id="message">Waiting...</p>
+
+    <script>
+      function showMessage() {
+        document.getElementById("message").textContent =
+          "You clicked the button";
+      }
+    </script>
+  </body>
+</html>
