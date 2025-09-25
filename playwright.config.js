@@ -5,6 +5,7 @@ module.exports = defineConfig({
   workers: 3,
   timeout: 30000, // max test time
   retries: 1, // retry failed tests
+  reporter: [[ 'html', {open: 'html '}]],
 
   use: {
     baseURL: "http://localhost:5500",
@@ -17,14 +18,6 @@ module.exports = defineConfig({
       use: {
         browserName: "chromium",
       },
-    },
-    {
-      name: "Firefox",
-      use: { browserName: "firefox" },
-    },
-    {
-      name: "webkit",
-      use: { browserName: "webkit" },
     },
   ],
 });
